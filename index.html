@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storage Source | Commercial Avenue Storage, New Philadelphia, Ohio</title>
+<meta name="description" content="Gated, video-monitored self-storage at 831 Commercial Ave SE, New Philadelphia, Ohio 44663. 10x12 and 10x20 drive-up units. Call (330) 440-8109 for availability.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@500;600;700&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F3EFE6;
+    --paper:#FBFAF6;
+    --barn-red:#9E2B32;
+    --barn-red-dark:#7C2028;
+    --charcoal:#24221F;
+    --tan:#C7BCA1;
+    --sky:#5D7F91;
+    --gravel:#B9B6AC;
+    --line: rgba(36,34,31,0.14);
+    --radius: 2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'Karla', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    margin:0;
+    font-weight:700;
+    color:var(--charcoal);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--barn-red-dark);
+    font-weight:600;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  :focus-visible{outline:3px solid var(--sky);outline-offset:3px;}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    background:var(--charcoal);
+    color:var(--cream);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.04em;
+  }
+  .topbar .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:9px 24px;flex-wrap:wrap;gap:6px;
+  }
+  .topbar a.phone{color:var(--tan);text-decoration:none;font-weight:600;}
+  .topbar a.phone:hover{color:#fff;}
+
+  /* ---------- hero: real photo of the lot ---------- */
+  .hero{
+    position:relative;
+    background-image:
+      linear-gradient(180deg, rgba(24,23,21,0.55) 0%, rgba(24,23,21,0.78) 100%),
+      url('images/hero-lot.jpg');
+    background-size:cover;
+    background-position:center 65%;
+    border-bottom:10px solid var(--barn-red);
+    overflow:hidden;
+  }
+  .hero-inner{
+    position:relative;
+    padding:96px 24px 76px;
+    text-align:center;
+  }
+  .hero-panel{
+    display:inline-block;
+    background:var(--charcoal);
+    color:var(--cream);
+    padding:34px 42px;
+    border-radius:var(--radius);
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+  }
+  .hero-panel .eyebrow{color:var(--tan);}
+  .hero h1{
+    font-family:'Archivo Black', sans-serif;
+    font-size:clamp(2.4rem, 6vw, 4.2rem);
+    line-height:0.98;
+    color:#fff;
+    margin:10px 0 6px;
+  }
+  .hero .sub{
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:clamp(1.05rem, 2.2vw, 1.35rem);
+    letter-spacing:0.04em;
+    color:var(--cream);
+    text-transform:none;
+    font-weight:600;
+  }
+  .hero .loc{
+    margin-top:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.85rem;
+    color:var(--tan);
+    letter-spacing:0.04em;
+  }
+  .cta-row{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
+    font-size:1.05rem;
+    padding:14px 26px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    border:2px solid transparent;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .btn-primary{background:var(--cream);color:var(--charcoal);}
+  .btn-primary:hover{transform:translateY(-2px);background:#fff;}
+  .btn-ghost{border-color:var(--tan);color:var(--cream);}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:#fff;}
+  @media (prefers-reduced-motion:reduce){.btn:hover{transform:none;}}
+
+  /* ---------- section shell ---------- */
+  section{padding:72px 0;}
+  .section-head{max-width:640px;margin:0 0 40px;}
+  .section-head h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin-top:8px;}
+  .section-head p{margin-top:12px;color:#4b4844;}
+
+  /* ---------- intro strip ---------- */
+  .intro{background:var(--paper);border-bottom:1px solid var(--line);}
+  .intro .wrap{padding-top:56px;padding-bottom:56px;}
+  .intro p{
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:clamp(1.25rem,2.6vw,1.7rem);
+    font-weight:600;
+    letter-spacing:0.01em;
+    max-width:820px;
+    color:var(--charcoal);
+  }
+  .intro p strong{color:var(--barn-red-dark);}
+
+  /* ---------- photo gallery strip ---------- */
+  .gallery{background:var(--cream);}
+  .gallery-grid{
+    display:grid;grid-template-columns:1.4fr 1fr;gap:22px;
+  }
+  @media (max-width:720px){ .gallery-grid{grid-template-columns:1fr;} }
+  .photo{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    box-shadow:0 10px 24px rgba(0,0,0,0.14);
+  }
+  .photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .photo .cap{
+    position:absolute;left:0;right:0;bottom:0;
+    background:linear-gradient(0deg, rgba(24,23,21,0.82), rgba(24,23,21,0));
+    color:#fff;padding:34px 18px 14px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;letter-spacing:0.02em;font-size:1.05rem;
+  }
+  .gallery-grid .photo:first-child{min-height:340px;}
+  .gallery-grid .photo:last-child{min-height:340px;}
+  @media (max-width:720px){
+    .gallery-grid .photo{min-height:260px !important;}
+  }
+
+  /* ---------- unit doors (signature element) ---------- */
+  .units{background:var(--cream);}
+  .door-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:28px;
+  }
+  @media (max-width:720px){ .door-grid{grid-template-columns:1fr;} }
+
+  .door-card{
+    position:relative;
+    background:var(--charcoal);
+    border-radius:var(--radius);
+    overflow:hidden;
+    height:380px;
+    box-shadow:0 10px 24px rgba(0,0,0,0.14);
+  }
+  .door-card .frame-label{
+    position:absolute;top:16px;left:18px;z-index:3;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;
+    color:var(--tan);
+  }
+  .door-card .reveal{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:32px;color:var(--cream);
+    z-index:1;
+  }
+  .door-card .reveal .size{
+    font-family:'Archivo Black', sans-serif;
+    font-size:2.6rem;color:#fff;line-height:1;
+  }
+  .door-card .reveal .size span{font-size:1.1rem;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;color:var(--tan);display:block;margin-top:8px;letter-spacing:0.05em;font-weight:600;}
+  .door-card .reveal .price{
+    margin-top:22px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:2.1rem;font-weight:600;color:#fff;
+  }
+  .door-card .reveal .price sub{font-size:0.95rem;color:var(--tan);font-family:'Karla',sans-serif;font-weight:400;}
+  .door-card .reveal .note{margin-top:14px;font-size:0.92rem;color:var(--tan);max-width:320px;}
+  .door-card .reveal .btn{margin-top:22px;align-self:flex-start;}
+
+  .door-shutter{
+    position:absolute;inset:0;z-index:2;
+    background:
+      repeating-linear-gradient(180deg,
+        var(--barn-red) 0px, var(--barn-red) 22px,
+        var(--barn-red-dark) 22px, var(--barn-red-dark) 26px);
+    box-shadow:inset 0 -18px 30px -10px rgba(0,0,0,0.45);
+    transition:transform 0.5s cubic-bezier(.4,0,.2,1);
+    display:flex;align-items:flex-end;justify-content:center;
+    padding-bottom:20px;
+  }
+  .door-shutter .hint{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;letter-spacing:0.08em;font-weight:600;
+    color:rgba(255,255,255,0.85);
+    font-size:0.85rem;
+    padding:8px 16px;
+    border:1px solid rgba(255,255,255,0.5);
+    border-radius:var(--radius);
+  }
+  .door-card:hover .door-shutter,
+  .door-card:focus-within .door-shutter{ transform:translateY(-100%); }
+  @media (prefers-reduced-motion:reduce){
+    .door-shutter{transition:none;}
+  }
+  /* touch devices: tap target opens door via button below grid instead of relying on hover */
+  .door-card.is-open .door-shutter{transform:translateY(-100%);}
+
+  .door-toggle{
+    position:absolute;inset:0;z-index:4;
+    background:transparent;border:0;cursor:pointer;width:100%;
+  }
+
+  /* ---------- features ---------- */
+  .features{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .feat-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+  }
+  @media (max-width:860px){ .feat-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:480px){ .feat-grid{grid-template-columns:1fr;} }
+  .feat{
+    padding:26px 22px;
+    border-left:1px solid var(--line);
+  }
+  .feat:first-child{border-left:none;}
+  @media (max-width:860px){
+    .feat:nth-child(odd){border-left:none;}
+  }
+  .feat .mark{
+    width:34px;height:34px;border-radius:50%;
+    background:var(--barn-red);
+    margin-bottom:14px;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:0.85rem;
+  }
+  .feat h3{font-size:1.15rem;letter-spacing:0.01em;}
+  .feat p{margin:8px 0 0;color:#4b4844;font-size:0.94rem;}
+
+  /* ---------- gate / location section ---------- */
+  .gate{
+    position:relative;
+    background-image:
+      linear-gradient(180deg, rgba(24,23,21,0.82), rgba(24,23,21,0.9)),
+      url('images/gate.jpg');
+    background-size:cover;
+    background-position:center 40%;
+    color:var(--cream);
+  }
+  .gate .wrap{position:relative;}
+  .gate-grid{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;
+  }
+  @media (max-width:820px){ .gate-grid{grid-template-columns:1fr;} }
+  .gate h2{color:#fff;}
+  .gate p{color:var(--tan);margin-top:14px;max-width:460px;}
+  .notice-card{
+    background:var(--barn-red);
+    color:#fff;
+    padding:28px 30px;
+    border-radius:var(--radius);
+    border:2px solid rgba(255,255,255,0.25);
+  }
+  .notice-card .eyebrow{color:rgba(255,255,255,0.75);}
+  .notice-card .phone-big{
+    font-family:'Archivo Black', sans-serif;
+    font-size:clamp(1.7rem,4vw,2.3rem);
+    color:#fff;text-decoration:none;display:block;margin:10px 0 16px;
+    letter-spacing:0.01em;
+  }
+  .notice-card .phone-big:hover{text-decoration:underline;}
+  .notice-card ul{list-style:none;margin:0;padding:0;font-family:'IBM Plex Mono',monospace;font-size:0.82rem;}
+  .notice-card li{padding:6px 0;border-top:1px solid rgba(255,255,255,0.25);}
+  .notice-card li:first-child{border-top:none;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--charcoal);color:var(--tan);border-top:6px solid var(--barn-red);}
+  footer .wrap{padding:34px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.85rem;}
+  footer a{color:var(--cream);text-decoration:none;font-weight:600;}
+  footer a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>831 Commercial Ave SE, New Philadelphia, OH 44663</span>
+    <a class="phone" href="tel:3304408109">(330) 440-8109</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-panel">
+      <div class="eyebrow">Commercial Avenue Storage</div>
+      <h1>Storage&nbsp;Source</h1>
+      <div class="sub">Gated, drive-up self-storage</div>
+      <div class="loc">831 Commercial Ave SE, New Philadelphia, OH 44663</div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:3304408109">Call (330) 440-8109</a>
+        <a class="btn btn-ghost" href="#units">See unit sizes</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="intro">
+  <div class="wrap">
+    <p>Two straightforward unit sizes, month to month, behind a locked gate on <strong>Commercial Avenue</strong> in New Philadelphia. No office visit required, call for availability and move in.</p>
+  </div>
+</div>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="gallery-grid">
+      <div class="photo">
+        <img src="images/units-row.jpg" alt="Row of red roll-up storage doors with numbered gravel parking spaces at Storage Source">
+        <div class="cap">Numbered, drive-up units on Commercial Avenue</div>
+      </div>
+      <div class="photo">
+        <img src="images/sign.jpg" alt="Storage Source commercial avenue storage sign with phone number (330) 440-8109">
+        <div class="cap">Look for the sign, call for availability</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="units" id="units">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Unit sizes &amp; rates</div>
+      <h2>Roll up the door, see what fits</h2>
+      <p>Both sizes are drive-up units with red steel roll-up doors, on a gravel lot with marked, numbered spaces. Tap or hover a door to see the details.</p>
+    </div>
+
+    <div class="door-grid">
+
+      <div class="door-card" tabindex="0">
+        <span class="frame-label">Unit type: Standard</span>
+        <button class="door-toggle" aria-label="Reveal 10 by 12 unit pricing" onclick="this.parentElement.classList.toggle('is-open')"></button>
+        <div class="reveal">
+          <div class="size">10 &times; 12<span>Drive-up unit</span></div>
+          <div class="price">$75<sub>&nbsp;/ month + tax</sub></div>
+          <div class="note">Fits a studio or one-bedroom's worth of furniture and boxes. Good for seasonal gear, tools, or overflow.</div>
+          <a class="btn btn-primary" href="tel:3304408109">Call to reserve</a>
+        </div>
+        <div class="door-shutter"><span class="hint">Tap to open door ▲</span></div>
+      </div>
+
+      <div class="door-card" tabindex="0">
+        <span class="frame-label">Unit type: Large</span>
+        <button class="door-toggle" aria-label="Reveal 10 by 20 unit pricing" onclick="this.parentElement.classList.toggle('is-open')"></button>
+        <div class="reveal">
+          <div class="size">10 &times; 20<span>Drive-up unit</span></div>
+          <div class="price">$95<sub>&nbsp;/ month + tax</sub></div>
+          <div class="note">Room for a full household, a small camper's worth of gear, or a workshop. Our largest available size.</div>
+          <a class="btn btn-primary" href="tel:3304408109">Call to reserve</a>
+        </div>
+        <div class="door-shutter"><span class="hint">Tap to open door ▲</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">On site</div>
+      <h2>What you get with every unit</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="mark">01</div>
+        <h3>24/7 gated access</h3>
+        <p>A locked chain-link gate keeps the lot secured, 24/7 access, authorized parking only.</p>
+      </div>
+      <div class="feat">
+        <div class="mark">02</div>
+        <h3>Video surveillance</h3>
+        <p>Cameras cover the property, posted and active around the clock.</p>
+      </div>
+      <div class="feat">
+        <div class="mark">03</div>
+        <h3>Drive-up access</h3>
+        <p>Pull your vehicle or trailer right up to your door. No elevators, no hallways.</p>
+      </div>
+      <div class="feat">
+        <div class="mark">04</div>
+        <h3>Room to maneuver</h3>
+        <p>A wide gravel lot with marked spaces makes backing in a trailer or moving truck easy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gate">
+  <div class="wrap">
+    <div class="gate-grid">
+      <div>
+        <div class="eyebrow">Availability &amp; contact</div>
+        <h2>Call for availability</h2>
+        <p>Units go quickly. The fastest way to check what's open is a phone call. No online booking, no waiting on a callback form.</p>
+        <p>Storage Source · Commercial Avenue Storage<br>
+        <a href="https://maps.google.com/?q=831+Commercial+Ave+SE,+New+Philadelphia,+OH+44663" target="_blank" rel="noopener">831 Commercial Ave SE<br>New Philadelphia, OH 44663</a></p>
+      </div>
+      <div class="notice-card">
+        <div class="eyebrow">Call now</div>
+        <a class="phone-big" href="tel:3304408109">(330) 440-8109</a>
+        <ul>
+          <li>10&times;12 unit: $75 / month + tax</li>
+          <li>10&times;20 unit: $95 / month + tax</li>
+          <li>Month-to-month, no long-term lease</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Storage Source, 831 Commercial Ave SE, New Philadelphia, OH 44663</span>
+    <a href="tel:3304408109">(330) 440-8109</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
